@@ -27,5 +27,41 @@
 // }
 
 
+//   1.3 
+//    let soma = 0
+//   console.log(soma)
+//   for (let i=1;i<=100; i ++){
+//    soma = soma +1
+//   }
+
+      
+// 1.4
+
+// for(let i=1; i<=10;i++){
+//     let resultado = i
+//     console.log(i + "x" + 5 +"="+  resultado)
+// }
+
+//1.5
+//  let numero = Number(prompt("tabuada do que?"))
+//  for(let i=1; i<=10;i++){
+//     let resultado = i*numero
+//     console.log(i+ "x" + numero +"=" + resultado);
+//  }
+
+//1.6
+for(let i=1; i<=20; i++){
+    if(i%2 ==1){
+        alert(i)
+
+    }
+}
+
+//ex6b - feio
+for(let i=1; i<=20;i=i+2){
+    alert(i)
+}
+
+ 
 
  
