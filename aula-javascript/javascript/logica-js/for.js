@@ -32,3 +32,25 @@
 //     console.log("fruta",frutas[1])
 // }
 
+
+
+
+
+
+        for (let i = 1; i <= 100; i++) {
+            console.log("numero com for:",)
+        
+        }
+
+      let dia = "sexta"
+      switch(dia){
+        case "segunda":
+            console.log("segundou");
+            break;
+            default:
+                console.log("opcao invalida");
+                break;
+      }
+let i=1
+
+      
