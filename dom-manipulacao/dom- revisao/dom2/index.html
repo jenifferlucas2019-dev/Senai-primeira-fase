@@ -1,0 +1,52 @@
+ <h1>O Porco - Cofrinho</h1>
+
+  <label>Valor do produto (R$):</label>
+  <input type="number" id="produto" step="0.01" placeholder="Ex: 15.75">
+
+  <label>Moedas de 1 real:</label>
+  <input type="number" id="m1" min="0" value="0">
+
+  <label>Moedas de 50 centavos:</label>
+  <input type="number" id="m050" min="0" value="0">
+
+  <label>Moedas de 25 centavos:</label>
+  <input type="number" id="m025" min="0" value="0">
+
+  <label>Moedas de 10 centavos:</label>
+  <input type="number" id="m010" min="0" value="0">
+
+  <label>Moedas de 5 centavos:</label>
+  <input type="number" id="m005" min="0" value="0">
+
+  <button onclick="verificar()">Verificar se dá pra comprar</button>
+
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    function verificar() {
+      const produto = parseFloat(document.getElementById('produto').value);
+      const m1 = parseInt(document.getElementById('m1').value) || 0;
+      const m050 = parseInt(document.getElementById('m050').value) || 0;
+      const m025 = parseInt(document.getElementById('m025').value) || 0;
+      const m010 = parseInt(document.getElementById('m010').value) || 0;
+      const m005 = parseInt(document.getElementById('m005').value) || 0;
+
+      const total = (m1 * 1) + (m050 * 0.5) + (m025 * 0.25) + (m010 * 0.10) + (m005 * 0.05);
+
+      let mensagem = `<p>Total no cofrinho: <strong>R$ ${total.toFixed(2)}</strong></p>`;
+
+      if (produto <= 0 || isNaN(produto)) {
+        mensagem += `<p style="color:red;">Digite um valor de produto válido!</p>`;
+      } else if (total >= produto) {
+        mensagem += `<p style="color:green;">🎉 Você tem dinheiro suficiente para comprar o produto!</p>`;
+      } else {
+        mensagem += `<p style="color:red;">💰 Falta R$ ${(produto - total).toFixed(2)} para comprar o produto.</p>`;
+      }
+
+      document.getElementById('resultado').innerHTML = mensagem;
+    }
+  </script>
+
+</body>
+</html>
+
